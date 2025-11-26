@@ -16,6 +16,6 @@ os.chdir(parent_dir)
 # Import the Flask app
 from app import app
 
-# Vercel Python runtime automatically converts Flask app to handle serverless requests
-# The app variable is exported and used by Vercel's @vercel/python builder
+# Vercel Python runtime expects the Flask app to be exported directly
+# The @vercel/python builder will automatically wrap it
 
