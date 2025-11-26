@@ -78,6 +78,11 @@ def toggle_shared(album_id):
     get_db().toggle_shared(album_id)
     return jsonify({'success': True})
 
+@app.route('/api/health')
+def health_check():
+    """Health check endpoint for Vercel"""
+    return jsonify({'status': 'ok', 'message': 'Flask app is running'})
+
 @app.route('/api/stats')
 def get_stats():
     """Get statistics about the collection"""

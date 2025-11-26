@@ -16,6 +16,6 @@ os.chdir(parent_dir)
 # Import the Flask app
 from app import app
 
-# Vercel Python runtime expects the Flask app to be exported directly
-# The @vercel/python builder will automatically wrap it
+# Vercel Python runtime - export the app directly
+# The @vercel/python builder automatically handles WSGI conversion
 
